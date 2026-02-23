@@ -249,11 +249,46 @@ html {
     margin-top: 50px;
 }
 
+.projects-key {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    color: #f0eafa;
+}
+
+.key-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.key-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.cybrancee-dot {
+    background-color: #9500cc;
+}
+
+.clique-dot {
+    background-color: #f11d75;
+}
+
+.personal-dot {
+    background-color: #00cc66;
+}
+
 .projects-container {
     display: flex;
     justify-content: center;
     gap: 40px;
-    margin-top: 50px;
+    margin-top: 40px;
     padding: 0 5%;
     flex-wrap: wrap;
 }
@@ -267,6 +302,19 @@ html {
     text-align: center;
     display: flex;
     flex-direction: column;
+    transition: border-color 0.3s ease;
+}
+
+.project-cybrancee {
+    border: 2px solid #9500cc;
+}
+
+.project-clique {
+    border: 2px solid #f11d75;
+}
+
+.project-personal {
+    border: 2px solid #00cc66;
 }
 
 .project-box img {
@@ -616,6 +664,13 @@ html {
     }
 
     /* ── Projects ── */
+    .projects-key {
+        flex-wrap: wrap;
+        gap: 15px;
+        font-size: 14px;
+        padding: 0 20px;
+    }
+
     .projects-container {
         flex-direction: column;
         align-items: center;
@@ -716,6 +771,11 @@ html {
     }
 
     /* ── Projects ── */
+    .projects-key {
+        font-size: 13px;
+        gap: 10px;
+    }
+
     .projects-container {
         padding: 0 15px;
     }

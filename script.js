@@ -107,3 +107,32 @@ receiptItems.forEach(item => {
         }
     });
 });
+
+// ---- Project Outline Hover Effect ----
+const cybranceeLogo = document.getElementById('cybrancee');
+const cliqueLogo = document.getElementById('clique');
+const projectBoxes = document.querySelectorAll('.project-box');
+
+function handleLogoHover(hoveredClass) {
+    projectBoxes.forEach(box => {
+        if (!box.classList.contains(hoveredClass)) {
+            box.style.borderColor = '#2b2b2b8b'; // Reset to default border color
+        }
+    });
+}
+
+function resetLogoHover() {
+    projectBoxes.forEach(box => {
+        box.style.borderColor = ''; // Remove inline style to restore CSS class border
+    });
+}
+
+if (cybranceeLogo) {
+    cybranceeLogo.addEventListener('mouseenter', () => handleLogoHover('project-cybrancee'));
+    cybranceeLogo.addEventListener('mouseleave', resetLogoHover);
+}
+
+if (cliqueLogo) {
+    cliqueLogo.addEventListener('mouseenter', () => handleLogoHover('project-clique'));
+    cliqueLogo.addEventListener('mouseleave', resetLogoHover);
+}

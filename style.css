@@ -528,6 +528,15 @@ html {
     line-height: 1.6;
 }
 
+.footer {
+    text-align: left;
+    font-family: 'JetBrains Mono', monospace;
+    color: #555;
+    font-size: 14px;
+    margin-top: 50px;
+    padding-bottom: 20px;
+}
+
 /* ── Pixelated custom scrollbar ── */
 
 /* Track */

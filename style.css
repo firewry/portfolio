@@ -710,6 +710,12 @@ html {
         padding: 0 10px;
     }
 
+    .companies img:hover {
+        filter: brightness(0) invert(1);
+        transform: none;
+        cursor: default;
+    }
+
     /* ── Projects ── */
     .projects-key {
         flex-wrap: wrap;
@@ -746,10 +752,7 @@ html {
     }
 
     .receipt-preview {
-        width: 100%;
-        max-width: 100%;
-        height: 450px;
-        padding: 20px;
+        display: none;
     }
 
     .receipt-preview-placeholder p {
@@ -798,15 +801,15 @@ html {
 
     /* ── Companies ── */
     .companies img {
-        height: 90px;
+        height: 60px;
     }
 
     #cybrancee {
-        height: 90px;
+        height: 60px;
     }
 
     #clique {
-        height: 70px;
+        height: 50px;
     }
 
     .role {
@@ -845,8 +848,7 @@ html {
     }
 
     .receipt-preview {
-        height: 380px;
-        padding: 15px;
+        display: none;
     }
 
     .receipt-store {

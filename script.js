@@ -93,8 +93,11 @@ receiptItems.forEach(item => {
     });
 
     item.addEventListener('click', () => {
-        if (isTouchDevice()) {
-            // First tap shows preview, second tap opens PDF
+        if (window.innerWidth <= 768) {
+            // Mobile: open PDF immediately since preview is hidden
+            openPdf(item);
+        } else if (isTouchDevice()) {
+            // Tablet or touch laptop: First tap shows preview, second tap opens PDF
             const previewId = 'preview-' + item.getAttribute('data-preview');
             const target = document.getElementById(previewId);
             if (target && target.style.display === 'flex') {
@@ -128,11 +131,15 @@ function resetLogoHover() {
 }
 
 if (cybranceeLogo) {
-    cybranceeLogo.addEventListener('mouseenter', () => handleLogoHover('project-cybrancee'));
+    cybranceeLogo.addEventListener('mouseenter', () => {
+        if (window.innerWidth > 768) handleLogoHover('project-cybrancee');
+    });
     cybranceeLogo.addEventListener('mouseleave', resetLogoHover);
 }
 
 if (cliqueLogo) {
-    cliqueLogo.addEventListener('mouseenter', () => handleLogoHover('project-clique'));
+    cliqueLogo.addEventListener('mouseenter', () => {
+        if (window.innerWidth > 768) handleLogoHover('project-clique');
+    });
     cliqueLogo.addEventListener('mouseleave', resetLogoHover);
 }

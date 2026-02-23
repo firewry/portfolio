@@ -191,7 +191,7 @@ html {
 }
 
 .companies img {
-    height: 150px;
+    height: 125px;
     width: auto;
     filter: brightness(0) invert(1);
     background-color: transparent;
@@ -200,11 +200,11 @@ html {
 }
 
 #cybrancee {
-    height: 150px;
+    height: 135px;
 }
 
 #clique {
-    height: 120px;
+    height: 110px;
 }
     
 .companies img:hover {
@@ -751,15 +751,15 @@ html {
 
     /* ── Companies ── */
     .companies img {
-        height: 110px;
+        height: 90px;
     }
 
     #cybrancee {
-        height: 110px;
+        height: 90px;
     }
 
     #clique {
-        height: 85px;
+        height: 70px;
     }
 
     .role {
